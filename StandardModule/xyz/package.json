@@ -1,0 +1,6 @@
+{
+	"name":"xyz",
+	"description":"Awaiii!",
+	"version":"1.0.0",
+	"main":"./lib/xyz.js"
+}

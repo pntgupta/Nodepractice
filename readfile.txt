@@ -1,0 +1,13 @@
+var fs=require('fs');
+
+fs.open('inheritance.txt','r',function(err,handle){
+	if(err==null)
+	{
+		var b = new Buffer(100000);
+		fs.read(handle,b,0,100000,null,function(err,bytes_read){
+			console.log(b.toString("utf8",0,bytes_read));
+			fs.close(handle);
+		});
+	}
+	else console.log("Error");
+});
